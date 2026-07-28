@@ -746,16 +746,16 @@ async def auto_filter(client, msg, spoll=False):
     # ✅ Send response
     try:
         delauto = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
-        await asyncio.sleep(600)
+        await asyncio.sleep(350)
         await delauto.delete()
-        await message.delete()
+        #await message.delete()
 
     except Exception as e:
         logger.exception(e)
 
     if spoll:
         await msg.message.delete()
-        await message.delete()
+        #await message.delete()
 
 
 # SPELL CHECK REMOVED
